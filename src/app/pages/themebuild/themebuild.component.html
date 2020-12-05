@@ -1,0 +1,10 @@
+<main 
+  class="col-md-9 ml-sm-auto col-lg-10 example-list-horiz"
+  cdkDropList 
+  #listContentItems="cdkDropList"
+  [cdkDropListData]="dropItems"
+  (cdkDropListDropped)="drop($event)">
+  <div class="example-box" *ngFor="let ads of dropItems" cdkDragBoundary=".example-container" cdkDrag>
+    <app-factory [ads]="ads"></app-factory>
+  </div>
+</main>
